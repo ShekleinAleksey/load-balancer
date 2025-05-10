@@ -13,6 +13,8 @@ services:
       - DB_NAME=balancerdb
     depends_on:
       - db
+    volumes:
+      - ./config:/app/config:ro
 
   db:
     image: postgres:15-alpine 
