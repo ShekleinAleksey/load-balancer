@@ -29,6 +29,7 @@ type RateLimit struct {
 
 func InitConfig() (config Config, err error) {
 	viper.AddConfigPath("config")
+	viper.AddConfigPath("/app/config") // Для Docker
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	if err := viper.ReadInConfig(); err != nil {
