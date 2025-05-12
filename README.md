@@ -11,7 +11,7 @@ Go-реализация балансировщика нагрузки с rate li
 
 ### Запуск с Docker
 ```bash
-docker-compose up -d --build
+docker-compose up --build
 ```
 
 ### Тестирование
@@ -19,5 +19,3 @@ docker-compose up -d --build
 # Unit-тесты
 go test -v ./...
 
-# Интеграционные тесты с race detection
-go test -race -tags=integration ./...
